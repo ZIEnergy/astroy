@@ -4,20 +4,21 @@ html(lang='en')
   include ../templates/blocks.pug
   
   body
-    +header
-    +front
-    .content
-      .wrapper
-        +sidebar
-        .content__section
-          .content__category
-            +category('truck', 'МОНОЛИТНОБЕТОННЫЕ И ЖЕЛЕЗОБЕТОННЫЕ КОНСТРУКЦИИ, ПРОМЫШЛЕННЫЕ ПОЛЫ')
-            +category('gears', 'Монтаж технологического оборудования и трубопроводов')
-            +category('electricity', 'электромонтажные и пусконаладочные работы')
-            +category('digging', 'Земляные работы')
-            +category('metal', 'Изготовление и монтаж металлоконструкций')
-            +category('project', 'Проектные работы')
-            +category('construction', 'Гражданское строительство')
-            +category('special', 'Специальные работы')
+    .page
+      +header
+      +front
+      .content
+        .wrapper.content__wrapper
+          +sidebar
+          .content__section
+            .content__category
+              +category('truck', 'МОНОЛИТНОБЕТОННЫЕ И ЖЕЛЕЗОБЕТОННЫЕ КОНСТРУКЦИИ, ПРОМЫШЛЕННЫЕ ПОЛЫ')
+              +category('gears', 'Монтаж технологического оборудования и трубопроводов')
+              +category('electricity', 'электромонтажные и пусконаладочные работы')
+              +category('digging', 'Земляные работы')
+              +category('metal', 'Изготовление и монтаж металлоконструкций')
+              +category('project', 'Проектные работы')
+              +category('construction', 'Гражданское строительство')
+              +category('special', 'Специальные работы')
     +footer
     include ../templates/scripts.pug

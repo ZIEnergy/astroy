@@ -2,5 +2,6 @@ mixin footer(additionalClass)
   footer.footer(class=additionalClass)
     .wrapper.footer__wrapper
       .footer__copyright © 2016. “А-Строй” Строительный холдинг
-      +button('Написать нам', 'footer__message')
-      +contacts('contacts--left')
+      .footer__right
+        +button('Написать нам', 'footer__message')
+        +contacts('contacts--left')

@@ -1,3 +1,55 @@
 .category {
+  width: 33.33%;
+  padding-right: 50px;
+  text-decoration: none;
   
+  &:nth-child(3n) {
+    padding-right: 0;
+  }
+  
+  &__icon {
+    height: 90px;
+    width: 100%;
+    margin-bottom: 10px;
+    
+    &--truck {
+      background: url(../img/icon-truck.png) no-repeat left bottom;
+    }
+    
+    &--gears {
+      background: url(../img/icon-gears.png) no-repeat left bottom;
+    }
+    
+    &--electricity {
+      background: url(../img/icon-electricity.png) no-repeat left bottom;
+    }
+    
+    &--digging {
+      background: url(../img/icon-digging.png) no-repeat left bottom;
+    }
+    
+    &--metal {
+      background: url(../img/icon-metal.png) no-repeat left bottom;
+    }
+    
+    &--project {
+      background: url(../img/icon-project.png) no-repeat left bottom;
+    }
+    
+    &--construction {
+      background: url(../img/icon-construction.png) no-repeat left bottom;
+    }
+    
+    &--special {
+      background: url(../img/icon-special.png) no-repeat left bottom;
+    }
+  }
+  
+  &__content {
+    color: @color-black;
+    font-family: @font-secondary;
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+  }
 }
