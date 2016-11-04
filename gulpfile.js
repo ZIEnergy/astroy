@@ -10,7 +10,6 @@ var gulp = require('gulp'),
     insert = require('gulp-insert');
     imagemin = require('gulp-imagemin'),
     cleanCSS = require('gulp-clean-css'),
-    watch = require('gulp-watch'),
     runSequence = require('run-sequence')
 
 gulp.task('default', function () {
@@ -102,18 +101,10 @@ gulp.task('styles', function () {
     .pipe(browserSync.reload({stream:true}));
 });
 
-//gulp.task('watch', function () {
-//    gulp.watch(['./src/styles/*.less', './src/styles/global/*.less', './src/blocks/**/*.less', './src/styles/plugins/*.less'], ['styles']); gulp.watch(['./src/pages/*.pug','./src/templates/*.pug','./src/blocks/**/*.pug'], ['templates']);
-//    gulp.watch(['./src/images/*','./src/blocks/**/images/*'], ['images']);
-//    gulp.watch(['./src/blocks/**/*.js', './src/scripts/*.js'], ['scripts']);
-//});
-
 gulp.task('watch', function () {
-  return watch(['css/**/*.css'], { ignoreInitial: false })
-      .pipe(gulp.dest('build'));
-//    gulp.watch(['./src/styles/*.less', './src/styles/global/*.less', './src/blocks/**/*.less', './src/styles/plugins/*.less'], ['styles']); gulp.watch(['./src/pages/*.pug','./src/templates/*.pug','./src/blocks/**/*.pug'], ['templates']);
-//    gulp.watch(['./src/images/*','./src/blocks/**/images/*'], ['images']);
-//    gulp.watch(['./src/blocks/**/*.js', './src/scripts/*.js'], ['scripts']);
+    gulp.watch(['./src/styles/*.less', './src/styles/global/*.less', './src/blocks/**/*.less', './src/styles/plugins/*.less'], ['styles']); gulp.watch(['./src/pages/*.pug','./src/templates/*.pug','./src/blocks/**/*.pug'], ['templates']);
+    gulp.watch(['./src/images/*','./src/blocks/**/images/*'], ['images']);
+    gulp.watch(['./src/blocks/**/*.js', './src/scripts/*.js'], ['scripts']);
 });
 
 gulp.task('dev', [ 'clean', 'build', 'server', 'watch']);
