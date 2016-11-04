@@ -1,0 +1,7 @@
+mixin header(additionalClass)
+  header.header(class=additionalClass)
+    .wrapper
+      +logo
+      .header__right
+        +contacts('contacts--right')
+        +button('заказать звонок', 'header__callback')
