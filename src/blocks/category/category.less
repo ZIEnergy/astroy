@@ -2,15 +2,52 @@
   width: 33.33%;
   padding-right: 50px;
   text-decoration: none;
+  .transition;
+  
+  &:hover {
+    opacity: .7;
+  }
   
   &:nth-child(3n) {
     padding-right: 0;
+  
+    @media screen and (max-width: @screen-lg) {
+      padding-right: 0;
+    }
+  }
+  
+  &:nth-child(n+4) {
+    margin-top: 30px;
+  
+    @media screen and (max-width: @screen-lg) {
+      margin-top: 20px;
+    }
+  
+    @media screen and (max-width: @screen-xs) {
+      margin-top: 0;
+    }
+  }
+  
+  @media screen and (max-width: @screen-lg) {
+    width: 48%;
+    padding-right: 0;
+  }
+  
+  @media screen and (max-width: @screen-xs) {
+    width: 100%;
+  }
+  
+  &:nth-child(n+2) {
+  
+    @media screen and (max-width: @screen-xs) {
+      margin-top: 30px;
+    }
   }
   
   &__icon {
-    height: 90px;
+    height: 89px;
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 13px;
     
     &--truck {
       background: url(../img/icon-truck.png) no-repeat left bottom;
@@ -43,13 +80,25 @@
     &--special {
       background: url(../img/icon-special.png) no-repeat left bottom;
     }
+  
+    @media screen and (max-width: @screen-xs) {
+      background-position: center bottom;
+    }
   }
   
   &__content {
     color: @color-black;
     font-family: @font-secondary;
     font-size: 14px;
-    line-height: 18px;
+    line-height: 20px;
     text-transform: uppercase;
+  
+    @media screen and (max-width: @screen-sm) {
+      font-size: 12px;
+    }
+  
+    @media screen and (max-width: @screen-xs) {
+      text-align: center;
+    }
   }
 }
